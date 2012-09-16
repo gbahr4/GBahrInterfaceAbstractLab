@@ -24,3 +24,7 @@ Instructions for Lab #2:
    is it not possible. Write down your anwer in this document, using the
    white space below:
 
+    The Listov Substitution Principle can be used for the getters and setters 
+    for course name, course number, and credits for all three classes.
+    However, because Intro to Programming doesn't have any prerequisites,
+    the methods for prerequisites could not be part of the interface. 

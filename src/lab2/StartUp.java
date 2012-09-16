@@ -1,19 +1,18 @@
 
-package lab1;
+package lab2;
 
 /**
- * This class is responsible for staring the program.
- * The advantage of using an abstract class is that code for the common 
- * properties and methods could be written once and used in all three sub 
- * classes. However, there is a danger that bad code could be inherited.
- * @author      Greg Bahr
- * @version     3.00
+ * This class is responsible for starting the program.
+ * The advantage of using an interface is that because all methods are abstract,
+ * no bad code can be inherited. However, the properties and methods must be
+ * written for each sub-class.
+ * @author Greg Bahr
+ * @version 1.0
  */
-
 public class StartUp {
-        
+    
     public static void main(String[] args) {
-         
+        
         IntroToProgrammingCourse introToProgrammingCourse = new
                 IntroToProgrammingCourse();
         introToProgrammingCourse.setCourseName("Intro to Programming");
@@ -41,6 +40,6 @@ public class StartUp {
                 advancedJavaCourse.getCourseNumber());
         
       
-    
     }
+    
 }

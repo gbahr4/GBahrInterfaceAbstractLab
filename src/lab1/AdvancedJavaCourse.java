@@ -3,25 +3,23 @@ package lab1;
 import javax.swing.JOptionPane;
 
 /**
- * Describe responsibilities here.
- *
- * @author      your name goes here
- * @version     1.00
+ * This class is responsible for the properties and methods of Advanced Java.
+ * @author      Greg Bahr
+ * @version     3.00
  */
 public class AdvancedJavaCourse extends ProgrammingCourse {
-    private String courseName;
-    private String courseNumber;
-    private double credits;
-    private String prerequisites;
-    private final double MIN_CREDITS = 0.5;
-    private final double MAX_CREDITS = 4.0;
-    private String creditErrorMessage = "Error: credits must be in "
-            + "the range 0.5 to 4.0";
 
+    private String prerequisites;
+    private static final double MIN_CREDITS = 0.5;
+    private static final double MAX_CREDITS = 4.0;
+    private static final String creditErrorMessage = "Error: credits must be "
+            + "in the range 0.5 to 4.0";
+    private static final String prerequisiteErrorMessage = "Error: "
+            + "prerequisites cannot be null of empty string";
+    
     public AdvancedJavaCourse() {
     }
-    
-    
+   
 
     public String getCapitalizedCourseName() {
         return this.getCourseName().toUpperCase();
