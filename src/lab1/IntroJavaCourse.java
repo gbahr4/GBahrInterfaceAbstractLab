@@ -1,5 +1,6 @@
 package lab1;
 
+
 /**
  * Describe responsibilities here.
  *
@@ -11,18 +12,15 @@ public class IntroJavaCourse extends ProgrammingCourse {
     private String courseNumber;
     private double credits;
     private String prerequisites;
-
-    public IntroJavaCourse(String courseName, String courseNumber) {
-        this.courseName = courseName;
-        this.courseNumber = courseNumber;
+    private final double MIN_CREDITS = 0.5;
+    private final double MAX_CREDITS = 4.0;
+     private String creditErrorMessage = "Error: credits must be in "
+            + "the range 0.5 to 4.0";
+    
+    public IntroJavaCourse() {
     }
 
-    
-    public void setCourseNumber(String courseNumber) {
-        this.courseNumber = courseNumber;
-    }
-
-    
+           
     public String getPrerequisites() {
         return prerequisites;
     }
@@ -31,13 +29,12 @@ public class IntroJavaCourse extends ProgrammingCourse {
         this.prerequisites = prerequisites;
     }
 
-        public void setCredits(double credits) {
-        if(credits < 0 || credits > 5.0) {
-            System.out.println(
-                    "Error: credits must be in the range 0.5 to 4.0");
+    public void setCredits(double credits) {
+        if(credits < MIN_CREDITS || credits > MAX_CREDITS) {
+            System.out.println(creditErrorMessage);
             System.exit(0);
         }
-        this.setCredits(credits);
-    }
-
-}
+        this.credits = credits;
+        
+        }
+ }
