@@ -2,8 +2,9 @@
 package lab3;
 
 /**
- *
- * @author Greg
+ * Athlete interface provides the methods that are common to all athletes, 
+ * including football players, so the interface comes before the abstract class.
+ * @author Greg Bahr
  */
 public interface Athlete {
     

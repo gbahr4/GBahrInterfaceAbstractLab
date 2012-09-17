@@ -2,20 +2,25 @@
 package lab3;
 
 /**
- *
- * @author Greg
+ * Quarterback class
+ * @author Greg Bahr
  */
+
 public class Quarterback extends FootballPlayer implements Athlete  {
     
+    /**
+     * name, position, and responsibilities are declared in Quarterback
+     * because this class is where these properties are determined for each
+     * instantiation
+     */
+     
     private String name;
-    private String position;
-    private String abilities;
+    private String position = "quarterback";
+    private String responsibilities = "I throw and run the football";
     
     public Quarterback() {
     }
-    
-    
-    
+          
     public final String getName() {
         return name;
     }
@@ -24,15 +29,19 @@ public class Quarterback extends FootballPlayer implements Athlete  {
         this.name = name;
     }
     
-    public void setAbilities(String abilities) {
-        this.abilities = abilities;
-        
+    public void setResponsibilities() {
+        this.responsibilities = responsibilities;
     }
-
     
-    public void setPosition(String position) {
+    public void setPosition() {
         this.position = position;
     }
 
-           
+     public String getPosition() {
+        return position;
+    }
+     
+     public String getResponsibilities() {
+        return responsibilities;
+    }
 }
