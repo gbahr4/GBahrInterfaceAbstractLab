@@ -4,6 +4,7 @@ package lab3;
 /**
  * FootballPlayer abstract class
  * @author Greg Bahr
+ * @version 2.0
  */
 public abstract class FootballPlayer implements Athlete {
     

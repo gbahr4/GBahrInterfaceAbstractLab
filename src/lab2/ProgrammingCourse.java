@@ -4,7 +4,7 @@ package lab2;
 /**
  * This interface sets the contract for the three sub classes.
  * @author Greg Bahr
- * @version 1.0
+ * @version 2.0
  */
 public interface ProgrammingCourse {
     

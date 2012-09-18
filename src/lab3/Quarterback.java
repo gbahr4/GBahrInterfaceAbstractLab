@@ -4,6 +4,7 @@ package lab3;
 /**
  * Quarterback class
  * @author Greg Bahr
+ * @version 2.0
  */
 
 public class Quarterback extends FootballPlayer implements Athlete  {
@@ -29,15 +30,15 @@ public class Quarterback extends FootballPlayer implements Athlete  {
         this.name = name;
     }
     
-    public void setResponsibilities() {
+    public final void setResponsibilities() {
         this.responsibilities = responsibilities;
     }
     
-    public void setPosition() {
+    public final void setPosition() {
         this.position = position;
     }
 
-     public String getPosition() {
+     public final String getPosition() {
         return position;
     }
      

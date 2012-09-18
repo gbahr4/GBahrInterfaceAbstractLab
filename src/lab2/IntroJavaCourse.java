@@ -5,7 +5,7 @@ import javax.swing.JOptionPane;
 /**
  * This class is responsible for the properties and methods of Intro to Java.
  * @author      Greg Bahr
- * @version     1.00
+ * @version     2.0
  */
 public class IntroJavaCourse implements ProgrammingCourse {
     
@@ -13,55 +13,55 @@ public class IntroJavaCourse implements ProgrammingCourse {
     private String courseNumber;
     private double credits;
     private String prerequisites;
-    private static final String courseNameErrorMessage = 
+    private static final String COURSE_NAME_ERROR_MESSAGE = 
             "Error: courseName cannot be null of empty string";
-    private static final String courseNumberErrorMessage = "Error: courseNumber"
-            + " cannot be null of empty string";
+    private static final String COURSE_NUMBER_ERROR_MESSAGE = "Error: "
+            + "courseNumber cannot be null of empty string";
     private static final double MIN_CREDITS = 0.5;
     private static final double MAX_CREDITS = 4.0;
-    private static final String creditErrorMessage = "Error: credits must be "
+    private static final String CREDIT_ERROR_MESSAGE = "Error: credits must be "
             + "in the range 0.5 to 4.0";
-    private static final String prerequisiteErrorMessage = "Error: "
+    private static final String PREREQUISITE_ERROR_MESSAGE = "Error: "
             + "prerequisites cannot be null of empty string";
 
     public IntroJavaCourse() {
     }
     
    
-    public String getCourseNumber() {
+    public final String getCourseNumber() {
         return courseNumber;
     }
 
     public final void setCourseNumber(String courseNumber) {
         if(courseNumber == null || courseNumber.length() == 0) {
             JOptionPane.showMessageDialog(null,
-                    courseNumberErrorMessage);
+                    COURSE_NUMBER_ERROR_MESSAGE);
             System.exit(0);
         }
         this.courseNumber = courseNumber;
     }
 
-    public double getCredits() {
+    public final double getCredits() {
         return credits;
     }
 
-    public void setCredits(double credits) {
+    public final void setCredits(double credits) {
         if(credits < MIN_CREDITS || credits > MAX_CREDITS) {
             JOptionPane.showMessageDialog(null,
-                    creditErrorMessage);
+                    CREDIT_ERROR_MESSAGE);
             System.exit(0);
         }
-        this.setCredits(credits);
+        this.credits = credits;
     }
 
-    public String getPrerequisites() {
+    public final String getPrerequisites() {
         return prerequisites;
     }
 
     public void setPrerequisites(String prerequisites) {
         if(prerequisites == null || prerequisites.length() == 0) {
             JOptionPane.showMessageDialog(null,
-                    prerequisiteErrorMessage);
+                    PREREQUISITE_ERROR_MESSAGE);
             System.exit(0);
         }
         this.prerequisites = prerequisites;
@@ -70,13 +70,13 @@ public class IntroJavaCourse implements ProgrammingCourse {
      public final void setCourseName(String courseName) {
         if(courseName == null || courseName.length() == 0) {
             JOptionPane.showMessageDialog(null,
-                    courseNameErrorMessage);
+                    COURSE_NAME_ERROR_MESSAGE);
             System.exit(0);
         }
         this.courseName = courseName;
     }
      
-     public String getCourseName() {
+     public final String getCourseName() {
         return courseName;
     }
 }

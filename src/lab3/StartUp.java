@@ -3,6 +3,7 @@ package lab3;
 
  /**
   * @author Greg Bahr
+  * @version 2.0
   */
 
 public class StartUp {
